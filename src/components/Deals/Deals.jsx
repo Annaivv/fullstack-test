@@ -11,6 +11,7 @@ const items = [
 export const Deals = () => (
   <DealsSection>
     <DealsTitle>Open Deals</DealsTitle>
+    <p>Test server</p>
     <DealsList items={items} />
   </DealsSection>
 );
