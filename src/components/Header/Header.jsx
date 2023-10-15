@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, StyledButton } from "./Header.styled";
+import { Container, StyledButton, Logo } from "./Header.styled";
 import { Modal } from "../Modal/Modal";
 
 export const Header = () => {
@@ -7,7 +7,6 @@ export const Header = () => {
 
   const modalOpen = () => {
     setIsModalOpen(true);
-    console.log("Open!");
   };
 
   const modalClose = () => {
@@ -17,7 +16,7 @@ export const Header = () => {
   return (
     <>
       <Container>
-        <div>MyLogo</div>
+        <Logo>My Logo</Logo>
         <div>
           <StyledButton onClick={modalOpen}>Log In</StyledButton>
           <StyledButton>Sign Up</StyledButton>

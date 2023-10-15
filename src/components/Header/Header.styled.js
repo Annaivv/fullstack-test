@@ -11,6 +11,13 @@ export const Container = styled.div`
   width: 100%;
 `;
 
+export const Logo = styled.div`
+  align-self: center;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34px;
+`;
+
 export const StyledButton = styled.button`
   width: 160px;
   border: 1px solid #b29f7e;
