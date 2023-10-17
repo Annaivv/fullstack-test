@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import image from "../../images/modal-image.jpg";
+import background from "../../images/modal-image.jpg";
 
 export const Overlay = styled.div`
   position: fixed;
@@ -10,13 +10,18 @@ export const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1200;
+  background-color: rgba(112, 112, 112, 0.8);
+  z-index: 5;
 `;
 
 export const ModalContent = styled.div`
-  width: calc(100vw - 48px);
-  max-height: calc(100vh - 24px);
+  width: 80%;
+  height: 80vh;
+  background-color: #f2f2f2;
+  background-image: url(${background});
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 65%;
 `;
 
 export const HeaderBar = styled.div`
@@ -28,25 +33,14 @@ export const HeaderBar = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  // background: background: url(${image}), lightgray 50% / cover no-repeat;
-`;
-
-export const Image = styled.img`
-  max-width: 60vw;
+  width: 35%;
+  margin: 0 0 0 auto;
 `;
 
 export const LoginForm = styled.form`
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  padding-top: 25vh;
-  padding-left: 100px;
-  padding-right: 100px;
-  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 100px;
   font-family: "Merriweather", serif;
   font-weight: 700;
 `;

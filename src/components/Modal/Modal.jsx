@@ -72,7 +72,6 @@ export const Modal = ({ onClose, onLogin }) => {
       <ModalContent>
         <HeaderBar />
         <ContentContainer>
-          <Image src={image} />
           <LoginForm autoComplete="off" onSubmit={handleSubmit}>
             <Title>Login</Title>
             <Label>
