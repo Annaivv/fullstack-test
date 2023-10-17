@@ -1,13 +1,45 @@
 import styled from "styled-components";
 
 export const DealCard = styled.div`
-  min-width: 630px;
-  flex-grow: 1;
-  padding: 20px 14px;
-  height: 400px;
+  position: relative;
   background-color: #f2f2f2;
 `;
 
 export const CardContent = styled.div`
-  padding-top: 297px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 20px 14px;
+  color: #fff;
+  font-family: Lato;
+  font-size: 18px;
+  line-height: 22px;
+`;
+
+export const ItemImage = styled.img`
+  width: 100%;
+`;
+
+export const ItemTitle = styled.h4`
+  margin-bottom: 5px;
+  font-family: Merriweather;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 34px;
+`;
+
+export const ItemDetails = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 60px;
+  row-gap: 10px;
+`;
+
+export const ItemDetail = styled.p`
+  width: calc(33% - 40px);
 `;

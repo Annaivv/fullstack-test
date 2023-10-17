@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const List = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
 `;
