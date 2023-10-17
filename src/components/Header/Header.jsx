@@ -4,6 +4,7 @@ import { Modal } from "../Modal/Modal";
 
 export const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const modalOpen = () => {
     setIsModalOpen(true);
@@ -13,17 +14,38 @@ export const Header = () => {
     setIsModalOpen(false);
   };
 
+  const onLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const onLogout = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
     <>
       <Container>
         <Logo>My Logo</Logo>
-        <div>
-          <StyledButton onClick={modalOpen}>Log In</StyledButton>
-          <StyledButton>Sign Up</StyledButton>
-        </div>
+        {isLoggedIn ? (
+          <StyledButton onClick={onLogout}>Log Out</StyledButton>
+        ) : (
+          <div>
+            <StyledButton onClick={modalOpen}>Log In</StyledButton>
+            <StyledButton
+              style={{
+                backgroundColor: "#B29F7E",
+                color: "#fff",
+                border: "2px solid #B29F7E",
+                marginLeft: 10,
+              }}
+            >
+              Sign Up
+            </StyledButton>
+          </div>
+        )}
       </Container>
 
-      {isModalOpen && <Modal onClose={modalClose} />}
+      {isModalOpen && <Modal onClose={modalClose} onLogin={onLogin} />}
     </>
   );
 };

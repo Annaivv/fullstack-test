@@ -18,7 +18,7 @@ import image from "../../images/modal-image.jpg";
 
 const modalRoot = document.querySelector("#modal-root");
 
-export const Modal = ({ onClose }) => {
+export const Modal = ({ onClose, onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -45,7 +45,7 @@ export const Modal = ({ onClose }) => {
     setEmail("");
     setPassword("");
     form.reset();
-    console.log("Submit");
+    onClose();
   };
 
   const handleKeyDown = (e) => {
@@ -83,6 +83,7 @@ export const Modal = ({ onClose }) => {
                 placeholder="Email"
                 value={email}
                 onChange={handleChange}
+                autoComplete="off"
               />
             </Label>
             <Label>
@@ -93,6 +94,7 @@ export const Modal = ({ onClose }) => {
                 placeholder="Password"
                 value={password}
                 onChange={handleChange}
+                autoComplete="off"
               />
             </Label>
             <SignupLink
@@ -102,7 +104,9 @@ export const Modal = ({ onClose }) => {
             >
               Forgot password?
             </SignupLink>
-            <SigninButton type="submit">Sign In</SigninButton>
+            <SigninButton type="submit" onClick={onLogin}>
+              Sign In
+            </SigninButton>
             <SignupText>
               Don't have an account?{" "}
               <span>
