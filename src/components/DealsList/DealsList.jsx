@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { DealItem } from "../DealItem/DealItem";
 import { List } from "./DealsList.styled";
 
-const BASIC_API = "https://fullstack-test-backend.onrender.com/api";
+const BASIC_API = "http://localhost:4000/api";
 
 const getData = async () => {
   try {

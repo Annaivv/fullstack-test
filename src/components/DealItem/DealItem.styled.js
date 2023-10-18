@@ -14,11 +14,12 @@ export const CardContent = styled.div`
   justify-content: flex-end;
   width: 100%;
   height: 100%;
-  padding: 20px 14px;
   color: #fff;
-  font-family: Lato;
-  font-size: 18px;
-  line-height: 22px;
+  // padding: 20px 14px;
+  //
+  // font-family: Lato;
+  // font-size: 18px;
+  // line-height: 22px;
 `;
 
 export const ItemImage = styled.img`
@@ -28,15 +29,15 @@ export const ItemImage = styled.img`
 export const ItemTitle = styled.h4`
   margin-bottom: 5px;
   font-family: Merriweather;
-  font-size: 20px;
+  // font-size: 20px;
   font-weight: 700;
-  line-height: 34px;
+  // line-height: 34px;
 `;
 
 export const ItemDetails = styled.div`
   display: flex;
   flex-wrap: wrap;
-  column-gap: 60px;
+  // column-gap: 60px;
   row-gap: 10px;
 `;
 
