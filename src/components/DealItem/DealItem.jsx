@@ -4,7 +4,6 @@ import {
   ItemImage,
   ItemTitle,
   ItemDetails,
-  ItemDetail,
 } from "./DealItem.styled";
 
 export const DealItem = ({ deal }) => {
@@ -14,11 +13,11 @@ export const DealItem = ({ deal }) => {
       <CardContent>
         <ItemTitle>{deal.title}</ItemTitle>
         <ItemDetails>
-          <ItemDetail>{deal.price} Dhs</ItemDetail>
-          <ItemDetail>Yield {deal.yield}%</ItemDetail>
-          <ItemDetail>Sold {deal.sold}%</ItemDetail>
-          <ItemDetail>Tiket - {deal.tiket} Dhs</ItemDetail>
-          <ItemDetail>Days left {deal.days}</ItemDetail>
+          <p>{deal.price} Dhs</p>
+          <p>Yield {deal.yield}%</p>
+          <p>Sold {deal.sold}%</p>
+          <p>Tiket - {deal.tiket} Dhs</p>
+          <p>Days left {deal.days}</p>
         </ItemDetails>
       </CardContent>
     </DealCard>

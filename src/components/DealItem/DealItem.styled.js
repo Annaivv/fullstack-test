@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../Layout";
 
 export const DealCard = styled.div`
   position: relative;
@@ -15,11 +16,24 @@ export const CardContent = styled.div`
   width: 100%;
   height: 100%;
   color: #fff;
-  // padding: 20px 14px;
-  //
-  // font-family: Lato;
-  // font-size: 18px;
-  // line-height: 22px;
+  padding: 10px 14px;
+  font-family: Lato;
+  font-size: 12px;
+  line-height: 14px;
+  @media ${device.laptop} {
+    padding-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  @media ${device.laptopL} {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  @media ${device.desktop} {
+    padding: 30px 36px;
+    font-size: 36px;
+    line-height: 48px;
+  }
 `;
 
 export const ItemImage = styled.img`
@@ -27,20 +41,24 @@ export const ItemImage = styled.img`
 `;
 
 export const ItemTitle = styled.h4`
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-family: Merriweather;
-  // font-size: 20px;
   font-weight: 700;
-  // line-height: 34px;
+  font-size: 16px;
+  @media ${device.laptop} {
+    font-size: 20px;
+    line-height: 34px;
+  }
+  @media ${device.desktop} {
+    font-size: 56px;
+    line-height: 72px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const ItemDetails = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  // column-gap: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   row-gap: 10px;
-`;
-
-export const ItemDetail = styled.p`
-  width: calc(33% - 40px);
+  column-gap: 8px;
 `;
