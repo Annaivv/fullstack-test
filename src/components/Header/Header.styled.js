@@ -17,6 +17,9 @@ export const Container = styled.div`
   @media ${device.laptop} {
     padding: 24px 80px;
   }
+  @media ${device.desktop} {
+    padding: 40px 120px;
+  }
 `;
 
 export const Logo = styled.div`
@@ -31,6 +34,10 @@ export const Logo = styled.div`
   @media ${device.laptop} {
     font-size: 28px;
     line-height: 34px;
+  }
+  @media ${device.desktop} {
+    font-size: 48px;
+    line-height: 42px;
   }
 `;
 
@@ -54,5 +61,10 @@ export const StyledButton = styled.button`
     font-size: 16px;
     line-height: 22px;
     padding: 11px 48px;
+  }
+  @media ${device.desktop} {
+    font-size: 36px;
+    line-height: 42px;
+    padding: 22px 60px;
   }
 `;

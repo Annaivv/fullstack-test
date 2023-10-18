@@ -27,13 +27,5 @@ export const Layout = styled.div`
   min-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  // @media ${device.laptop} {
-  //   max-width: 800px;
-  // }
-
-  // @media ${device.desktop} {
-  //   max-width: 1440px;
-  // }
-  // max-width: 1440px;
-  // margin: 0;
+  max-width: ${device.desktop};
 `;
