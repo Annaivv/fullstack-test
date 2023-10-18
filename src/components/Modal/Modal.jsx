@@ -3,7 +3,6 @@ import { createPortal } from "react-dom";
 import {
   ContentContainer,
   HeaderBar,
-  Image,
   LoginForm,
   ModalContent,
   Overlay,
@@ -14,7 +13,6 @@ import {
   SigninButton,
   SignupText,
 } from "./Modal.styled";
-import image from "../../images/modal-image.jpg";
 
 const modalRoot = document.querySelector("#modal-root");
 
