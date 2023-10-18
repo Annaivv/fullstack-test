@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import background from "../../images/modal-image.jpg";
+import { device } from "../Layout";
 
 export const Overlay = styled.div`
   position: fixed;
@@ -18,10 +19,18 @@ export const ModalContent = styled.div`
   width: 80%;
   height: 80vh;
   background-color: #f2f2f2;
-  background-image: url(${background});
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 65%;
+  @media ${device.tablet} {
+    background-image: url(${background});
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+  @media ${device.laptopL} {
+    background-size: 67%;
+  }
+  @media ${device.desktop} {
+    background-size: contain;
+  }
 `;
 
 export const HeaderBar = styled.div`
@@ -33,21 +42,56 @@ export const HeaderBar = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  width: 35%;
-  margin: 0 0 0 auto;
+  @media ${device.tablet} {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+  }
+  @media ${device.laptop} {
+    width: 40%;
+    height: calc(80vh - 80px);
+    margin: 0 0 0 auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @media ${device.laptopL} {
+    width: 35%;
+  }
+  @media ${device.desktop} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const LoginForm = styled.form`
   display: flex;
   flex-direction: column;
-  padding: 10vh 100px;
   font-family: "Merriweather", serif;
   font-weight: 700;
+  padding: 30px 20px;
+  @media ${device.tablet} {
+    padding: 45px 50px;
+  }
+  @media ${device.laptop} {
+    padding: 60px;
+  }
+  @media ${device.laptopL} {
+    padding: 110px 100px;
+  }
+  @media ${device.desktop} {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h3`
   font-size: 28px;
   line-height: 34px;
+  @media ${device.desktop} {
+    font-size: 60px;
+    line-height: 72px;
+    margin-bottom: 36px;
+  }
 `;
 
 export const Label = styled.label`
@@ -57,6 +101,11 @@ export const Label = styled.label`
   width: 100%;
   font-size: 14px;
   line-height: 20px;
+  @media ${device.desktop} {
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: 36px;
+  }
 `;
 
 export const Input = styled.input`
@@ -68,6 +117,12 @@ export const Input = styled.input`
   font-family: Lato;
   font-size: 14px;
   line-height: 22px;
+  @media ${device.desktop} {
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: 16px;
+    padding: 24px 30px;
+  }
 `;
 
 export const SignupLink = styled.a`
@@ -76,6 +131,10 @@ export const SignupLink = styled.a`
   font-family: Lato;
   font-size: 14px;
   line-height: 22px;
+  @media ${device.desktop} {
+    font-size: 32px;
+    line-height: 42px;
+  }
 `;
 
 export const SigninButton = styled.button`
@@ -89,6 +148,11 @@ export const SigninButton = styled.button`
   border-radius: 5px;
   background: #b29f7e;
   border: 2px solid #b29f7e;
+  @media ${device.desktop} {
+    font-size: 36px;
+    line-height: 42px;
+    padding: 24px 30px;
+  }
 `;
 
 export const SignupText = styled.p`
@@ -98,4 +162,9 @@ export const SignupText = styled.p`
   font-family: Lato;
   font-size: 14px;
   line-height: 22px;
+  @media ${device.desktop} {
+    font-size: 32px;
+    line-height: 42px;
+    padding: 24px 30px;
+  }
 `;

@@ -58,7 +58,10 @@ export const ItemTitle = styled.h4`
 
 export const ItemDetails = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  @media ${device.tablet} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   row-gap: 10px;
   column-gap: 8px;
 `;
