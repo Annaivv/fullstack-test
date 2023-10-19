@@ -7,7 +7,7 @@ const BASIC_API = "https://backend-test-ahm5.onrender.com/api";
 
 const getData = async () => {
   try {
-    const response = await axios.get(`${BASIC_API}/deals`);
+    const response = await axios.get(`${BASIC_API}/deal`);
     console.log(response.data);
     return response.data;
   } catch (error) {
